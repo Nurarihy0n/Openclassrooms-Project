@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('font/Roboto-Italic-webfont.eot');
+    src: url('font/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Roboto-Italic-webfont.woff2') format('woff2'),
+         url('font/Roboto-Italic-webfont.woff') format('woff'),
+         url('font/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('font/Roboto-Italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('font/Roboto-Light-webfont.eot');
+    src: url('font/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Roboto-Light-webfont.woff2') format('woff2'),
+         url('font/Roboto-Light-webfont.woff') format('woff'),
+         url('font/Roboto-Light-webfont.ttf') format('truetype'),
+         url('font/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}@font-face {
+    font-family: 'robotobold';
+    src: url('font/Roboto-Bold-webfont.eot');
+    src: url('font/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('font/Roboto-Bold-webfont.woff') format('woff'),
+         url('font/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('font/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* decoration titre et texte 
+__________________________*/
+
+h1
+{
+    font-family: robotoitalic, sans-serif, arial;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+h2
+{
+    margin-top: 0;
+    font-size: 1.3em;
+}
+body
+{
+    font-family: robotolight, sans-serif, arial;
+    --theme-color: #9FA8DA;
+    margin: 0;
+}
+#tlt
+{
+    color: #9FA8DA;
+}
+#deve
+{
+    text-decoration: underline #9FA8DA;
+}
+h3
+{
+    border-bottom: solid 1px #9FA8DA;
+    font-style: bold;
+    font-size: 1.6em;
+}
+.section_logo
+{
+    color: var(--theme-color);
+    margin-right: 10px;
+    min-width: 15px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.section_logo .fa-circle
+{
+    font-size: 7px;
+    margin: auto;
+}
+
+/* alignage du block droite et gauche
+__________________________________ */
+
+#full_block
+{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1130px;
+    margin: auto;
+    position: relative;
+}
+#left_part
+{
+    background-color: #9FA8DA; 
+    flex: 0.3;
+    margin: 0px 30px 0px 0px;
+
+}
+#right_part
+{
+    flex: 0.7;
+}
+/* alignement et couleur bande gauche
+_____________________________________ */
+h4, h5
+{
+    text-align: center;
+    background-color: #37474F;
+    color: #9FA8DA;
+    font-size: 1.8em;
+}
+#loisirs
+{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.loisir_logo
+{
+    color: #37474F;
+}
+#propos
+{
+    font-size: 0.9em;
+    text-align: center;
+    margin: 1px 30px 300px 30px;
+}
+#coord
+{
+    font-size: 0.9em;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+#profil 
+{
+    text-align: center;
+    padding-top: 10px;
+}
+#profil_pics
+{
+    background-image: url(IMG_profil.jpg);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: solid 2px #37474F;
+    width: 135px;
+    height: 135px;
+    margin: 40px auto;
+}
+/*Mise en page de la partie droite
+_________________________________*/
+h3
+{
+    padding-top: 40px;
+}
+.job_degres
+{
+    font-family: robotobold, sans-serif, arial;
+    font-size: 1.1em;
+}
+.job_name
+{
+    font-family: robotobold, sans-serif, arial;
+    font-size: 1.2em;
+}
+.date_lieu
+{
+    display: flex;
+    flex-direction: column;
+}
+.block_exp
+{
+    display: flex;
+    flex-direction: row;
+}
+.exp_date
+{
+    min-width: 30%;
+}
+.name_reco
+{
+    font-family: robotobold, sans-serif, arial;
+}
+#list_recommendation
+{
+    display: flex;
+}
+.reco
+{
+    margin-right: 15%;
+}
+
+/* Media Queries max 1024px
+_________________________*/
+
+@media all and (max-width: 1024px)
+{
+    #full_block
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #right_part
+    {
+        margin: auto 50px;
+    }
+    #left_part
+    {
+        margin: 0;
+    }
+    .block_exp
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .exp_date
+    {
+        font-family: robotoitalic, sans-serif, arial;
+        font-size: 0.9em;
+        text-align: right;
+    }
+    h1, h2, h3
+    {
+        text-align: center;
+    }
+    h4
+    {
+        margin-top: 0;
+    }
+    .section_logo
+    {
+        display: none;
+    }
+    #profil_pics
+    {
+        display: none;
+    }
+    #list_recommendation
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #propos
+    {
+        margin: auto 30px;
+        text-align: center;
+    }
+    #coord, #propos, #loisirs
+    {
+        margin: auto 50px;
+    }
+}
